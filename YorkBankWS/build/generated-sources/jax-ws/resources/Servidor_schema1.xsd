@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://org.ws/" xmlns:tns="http://org.ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AccountBalance" type="tns:AccountBalance"/>
+
+  <xs:element name="AccountBalanceResponse" type="tns:AccountBalanceResponse"/>
+
+  <xs:element name="AddAccount" type="tns:AddAccount"/>
+
+  <xs:element name="AddAccountResponse" type="tns:AddAccountResponse"/>
+
+  <xs:element name="DeleteAccount" type="tns:DeleteAccount"/>
+
+  <xs:element name="DeleteAccountResponse" type="tns:DeleteAccountResponse"/>
+
+  <xs:element name="ListAccount" type="tns:ListAccount"/>
+
+  <xs:element name="ListAccountResponse" type="tns:ListAccountResponse"/>
+
+  <xs:complexType name="AccountBalance">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="pin" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AccountBalanceResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:cliente" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="cpf" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+      <xs:element name="pin" type="xs:string" minOccurs="0"/>
+      <xs:element name="saldo_incial" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ListAccount">
+    <xs:sequence>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ListAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:cliente" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeleteAccount">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="pin" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeleteAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddAccount">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0"/>
+      <xs:element name="pin" type="xs:string" minOccurs="0"/>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+      <xs:element name="cpf" type="xs:string" minOccurs="0"/>
+      <xs:element name="saldo_inicial" type="xs:double" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AddAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
