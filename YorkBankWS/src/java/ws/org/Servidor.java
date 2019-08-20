@@ -65,7 +65,7 @@ public String password = "12345678";
             if(retorno > 0){
                  return "Conta deletada com sucesso";
             }else{
-                 return "Conta nao encontrada";
+                 return "Conta nao encontrada ou pin errado";
             } 
            
         } catch (Exception erro) {
@@ -91,6 +91,8 @@ public String password = "12345678";
 
             while (rs.next()) {
                 Cliente cliente = new Cliente();
+                cliente.setId(rs.getInt("id"));
+                cliente.setCpf(rs.getString("cpf"));
                 cliente.setNome(rs.getString("nome"));
                 cliente.setSaldo_incial(rs.getDouble("saldo_inicial"));
                 lista.add(cliente);
@@ -117,7 +119,7 @@ public String password = "12345678";
             ResultSet rs = st.executeQuery(sql);
 
             while (rs.next()) {
-                
+                cliente.setId(rs.getInt("int"));
                 cliente.setNome(rs.getString("nome"));
                 cliente.setCpf(rs.getString("cpf"));
                 cliente.setSaldo_incial(rs.getDouble("saldo_inicial"));
