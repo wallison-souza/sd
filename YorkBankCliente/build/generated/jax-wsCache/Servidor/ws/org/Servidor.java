@@ -28,6 +28,33 @@ public interface Servidor {
     /**
      * 
      * @param pin
+     * @param cpf
+     * @param nome
+     * @param id
+     * @param saldoInicial
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "AddAccount")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "AddAccount", targetNamespace = "http://org.ws/", className = "ws.org.AddAccount")
+    @ResponseWrapper(localName = "AddAccountResponse", targetNamespace = "http://org.ws/", className = "ws.org.AddAccountResponse")
+    @Action(input = "http://org.ws/Servidor/AddAccountRequest", output = "http://org.ws/Servidor/AddAccountResponse")
+    public String addAccount(
+        @WebParam(name = "id", targetNamespace = "")
+        String id,
+        @WebParam(name = "pin", targetNamespace = "")
+        String pin,
+        @WebParam(name = "nome", targetNamespace = "")
+        String nome,
+        @WebParam(name = "cpf", targetNamespace = "")
+        String cpf,
+        @WebParam(name = "saldo_inicial", targetNamespace = "")
+        Double saldoInicial);
+
+    /**
+     * 
+     * @param pin
      * @param id
      * @return
      *     returns java.lang.String
@@ -57,33 +84,6 @@ public interface Servidor {
     public List<Cliente> listAccount(
         @WebParam(name = "nome", targetNamespace = "")
         String nome);
-
-    /**
-     * 
-     * @param pin
-     * @param cpf
-     * @param nome
-     * @param id
-     * @param saldoInicial
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod(operationName = "AddAccount")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "AddAccount", targetNamespace = "http://org.ws/", className = "ws.org.AddAccount")
-    @ResponseWrapper(localName = "AddAccountResponse", targetNamespace = "http://org.ws/", className = "ws.org.AddAccountResponse")
-    @Action(input = "http://org.ws/Servidor/AddAccountRequest", output = "http://org.ws/Servidor/AddAccountResponse")
-    public String addAccount(
-        @WebParam(name = "id", targetNamespace = "")
-        String id,
-        @WebParam(name = "pin", targetNamespace = "")
-        String pin,
-        @WebParam(name = "nome", targetNamespace = "")
-        String nome,
-        @WebParam(name = "cpf", targetNamespace = "")
-        String cpf,
-        @WebParam(name = "saldo_inicial", targetNamespace = "")
-        Double saldoInicial);
 
     /**
      * 

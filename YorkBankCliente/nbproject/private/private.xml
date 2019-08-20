@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/AKW/Desktop/faculdade/7%20semestre/SD/WS/YorkBankCliente/src/cl/views/clienteJPanel.java</file>
-            <file>file:/C:/Users/AKW/Desktop/faculdade/7%20semestre/SD/WS/YorkBankCliente/src/cl/views/JFrame.java</file>
+            <file>file:/D:/UFMT/SD/sd/YorkBankCliente/src/META-INF/wsdl/localhost_8080/YorkBankWS/Servidor.wsdl</file>
+            <file>file:/D:/UFMT/SD/sd/YorkBankCliente/xml-resources/web-service-references/Servidor/wsdl/localhost_8080/YorkBankWS/Servidor.wsdl</file>
+            <file>file:/D:/UFMT/SD/sd/YorkBankCliente/nbproject/jaxws-build.xml</file>
+            <file>file:/D:/UFMT/SD/sd/YorkBankCliente/nbproject/jax-ws.xml</file>
         </group>
     </open-files>
 </project-private>

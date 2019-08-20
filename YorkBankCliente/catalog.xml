@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/YorkBankWS/Servidor?wsdl" uri="xml-resources/web-service-references/Servidor/wsdl/localhost_8080/YorkBankWS/Servidor.wsdl"/>
     <system systemId="http://localhost:8080/YorkBankWS/Servidor?xsd=1" uri="xml-resources/web-service-references/Servidor/wsdl/localhost_8080/YorkBankWS/Servidor.xsd_1.xsd"/>
+    <system systemId="http://35.198.54.55:8080/YorkBankWS/Servidor?wsdl" uri="xml-resources/web-service-references/Servidor/wsdl/35.198.54.55_8080/YorkBankWS/Servidor.wsdl"/>
+    <system systemId="http://35.198.54.55:8080/YorkBankWS/Servidor?xsd=1" uri="xml-resources/web-service-references/Servidor/wsdl/35.198.54.55_8080/YorkBankWS/Servidor.xsd_1.xsd"/>
 </catalog>

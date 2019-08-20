@@ -20,39 +20,40 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="bairrojLabel" max="-2" attributes="0"/>
-                          <Component id="ruajLabel" max="-2" attributes="0"/>
-                          <Component id="nomejLabel" max="-2" attributes="0"/>
-                          <Component id="cpfjLabel" max="-2" attributes="0"/>
-                          <Component id="idjLabel" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="idjTextField" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="cpfjTextField" alignment="0" pref="399" max="32767" attributes="0"/>
-                          <Component id="nomejTextField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="field_senha" alignment="0" max="32767" attributes="0"/>
-                          <Component id="saldoTextField" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="74" pref="74" max="-2" attributes="0"/>
-                      <Component id="salvarjButton" linkSize="1" min="-2" pref="150" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="cancelarjButton" linkSize="1" min="-2" pref="162" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="removerjButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="editarjButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jScrollPane1" pref="481" max="32767" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="bairrojLabel" max="-2" attributes="0"/>
+                                  <Component id="ruajLabel" max="-2" attributes="0"/>
+                                  <Component id="nomejLabel" max="-2" attributes="0"/>
+                                  <Component id="cpfjLabel" max="-2" attributes="0"/>
+                                  <Component id="idjLabel" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="idjTextField" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                                  <Component id="cpfjTextField" alignment="0" pref="399" max="32767" attributes="0"/>
+                                  <Component id="nomejTextField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="field_senha" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="saldoTextField" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="74" pref="74" max="-2" attributes="0"/>
+                              <Component id="salvarjButton" linkSize="1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="cancelarjButton" linkSize="1" min="-2" pref="162" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="removerjButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -98,11 +99,8 @@
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="141" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" pref="19" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="removerjButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="editarjButton" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+              <Component id="removerjButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -221,14 +219,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removerjButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="editarjButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Editar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarjButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="field_senha">

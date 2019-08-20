@@ -56,7 +56,6 @@ public class clienteJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         ClientejTable = new javax.swing.JTable();
         removerjButton = new javax.swing.JButton();
-        editarjButton = new javax.swing.JButton();
         field_senha = new javax.swing.JPasswordField();
         saldoTextField = new javax.swing.JFormattedTextField();
 
@@ -105,13 +104,6 @@ public class clienteJPanel extends javax.swing.JPanel {
             }
         });
 
-        editarjButton.setText("Editar");
-        editarjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarjButtonActionPerformed(evt);
-            }
-        });
-
         field_senha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 field_senhaActionPerformed(evt);
@@ -132,34 +124,34 @@ public class clienteJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(bairrojLabel)
-                            .addComponent(ruajLabel)
-                            .addComponent(nomejLabel)
-                            .addComponent(cpfjLabel)
-                            .addComponent(idjLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(idjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cpfjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
-                            .addComponent(nomejTextField)
-                            .addComponent(field_senha)
-                            .addComponent(saldoTextField)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(salvarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(removerjButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editarjButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
-                        .addGap(4, 4, 4)))
+                        .addGap(4, 4, 4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(bairrojLabel)
+                                    .addComponent(ruajLabel)
+                                    .addComponent(nomejLabel)
+                                    .addComponent(cpfjLabel)
+                                    .addComponent(idjLabel))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(idjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cpfjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
+                                    .addComponent(nomejTextField)
+                                    .addComponent(field_senha)
+                                    .addComponent(saldoTextField)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(74, 74, 74)
+                                .addComponent(salvarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cancelarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(removerjButton))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -198,10 +190,8 @@ public class clienteJPanel extends javax.swing.JPanel {
                     .addComponent(cancelarjButton))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 19, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(removerjButton)
-                    .addComponent(editarjButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(removerjButton)
                 .addGap(174, 174, 174))
         );
 
@@ -257,27 +247,6 @@ public class clienteJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_removerjButtonActionPerformed
 
-    private void editarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarjButtonActionPerformed
-        int linha = ClientejTable.getSelectedRow();
-
-        if (linha >= 0) {
-            Cliente selecionado;
-           try {
-            String resut = porta.addAccount("0",field_senha.getText(), cpfjTextField.getText(),nomejTextField.getText(),Double.parseDouble(saldoTextField.getText()));
-            JOptionPane.showMessageDialog(
-                salvarjButton, resut);
-            } catch (Exception erro) {
-                JOptionPane.showMessageDialog(
-                    salvarjButton, "Nao foi possivel salvar");
-            }
-
-            
-            
-        } else {
-            JOptionPane.showMessageDialog(this, "Selecione 1 registro");
-        }
-    }//GEN-LAST:event_editarjButtonActionPerformed
-
     private void saldoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saldoTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_saldoTextFieldActionPerformed
@@ -293,7 +262,6 @@ public class clienteJPanel extends javax.swing.JPanel {
     private javax.swing.JButton cancelarjButton;
     private javax.swing.JLabel cpfjLabel;
     private javax.swing.JTextField cpfjTextField;
-    private javax.swing.JButton editarjButton;
     private javax.swing.JPasswordField field_senha;
     private javax.swing.JLabel idjLabel;
     private javax.swing.JTextField idjTextField;
